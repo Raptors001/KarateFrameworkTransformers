@@ -2,7 +2,7 @@ Feature: Token Generator Feature for TEK Insurance API
 
 	@token
   Scenario: Generate Token
-    Given url "https://tek-insurance-api.azurewebsites.net"
+    Given url appURL
     * path "/api/token"
     * request {"username":"supervisor","password":"tek_supervisor"}
     * method post

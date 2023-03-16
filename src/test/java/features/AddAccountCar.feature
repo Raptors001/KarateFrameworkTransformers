@@ -1,7 +1,7 @@
 Feature: TEK Insurance API Post Service
 
   Background: 
-    Given url "https://tek-insurance-api.azurewebsites.net"
+    Given url appURL
     * def tokenValue = callonce read("GenerateToken.feature")
     * def token = tokenValue.response.token
     * header Authorization = "Bearer " + token

@@ -2,7 +2,7 @@ Feature: TEK Insurance API Post Request
 
   @PostPrimaryAccount
   Scenario: Post Primary Account Service Test
-    Given url "https://tek-insurance-api.azurewebsites.net"
+    Given url appURL
     * def tokenValue = call read("GenerateToken.feature")
     * def token = tokenValue.response.token
     * header Authorization = "Bearer " + token
